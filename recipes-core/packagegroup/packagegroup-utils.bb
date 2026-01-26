@@ -20,6 +20,7 @@ RDEPENDS_${PN} = "\
   usbutils \
   e2fsprogs \
   mc \
+  perf \
   lrzsz \
   ntp \
   strace \

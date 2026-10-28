@@ -1,6 +1,6 @@
 PR="r9"
 DESCRIPTION = "TRIK core base v2"
-IMAGE_FEATURES += "package-management"
+IMAGE_FEATURES += "package-management x11-base"
 IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-core-boot \
 		${CORE_IMAGE_EXTRA_INSTALL} \
@@ -44,4 +44,6 @@ LICENSE = "MIT"
 
 inherit core-image
 
-IMAGE_ROOTFS_SIZE = "1280000"
+WKS_FILE = "trik-image-core.wks"
+
+IMAGE_ROOTFS_SIZE = "1572864"

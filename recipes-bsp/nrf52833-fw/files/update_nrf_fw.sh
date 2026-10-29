@@ -37,12 +37,13 @@ log_err() {
 	echo "nrf-fw-update: $*" >&2
 }
 
-# libgpiod v2 gpioset keeps the line held while the process is alive, so we
-# background it and remember the PID. Kill the PID to release the line.
 gpio_hold() {
 	gpioset -c "$1" "$2=$3" >/dev/null 2>&1 &
 	pid=$!
 	sleep 0.2
+	# gpioset (libgpiod v2) keeps running to hold the line; if it exited
+	# immediately, the chip/line is wrong or busy — fail loudly instead of
+	# proceeding with an un-held pin.
 	if ! kill -0 "$pid" 2>/dev/null; then
 		log_err "gpioset failed on $1 $2=$3"
 		return 1

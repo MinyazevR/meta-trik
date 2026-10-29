@@ -7,7 +7,6 @@ require trik-runtime-qt5.inc
 DEPENDS += "python3 rsync-native"
 DEPENDS += "gcc-sanitizers"
 RDEPENDS:${PN} += "bash xz"
-RDEPENDS:${PN} += "dsp-firmware"
 
 require trik-runtime-install-new.inc
 DEPENDS += "rsync-native python3"

@@ -19,7 +19,6 @@ RDEPENDS:${PN} = "\
   hostapd \
   trik-webpanel \
   tcpdump \
-  ti-wifi-utils \
   ${MACHINE_ESSENTIAL_EXTRA_RDEPENDS} \
  "
 

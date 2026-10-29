@@ -9,6 +9,7 @@ IMAGE_INSTALL = "packagegroup-base \
 		localedef \
 		procps \
 		packagegroup-utils \
+		packagegroup-firmware \
 		udev-extraconf \
 		mspbsl \
 		rc-local\

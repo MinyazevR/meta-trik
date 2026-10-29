@@ -22,7 +22,6 @@ IMAGE_INSTALL = "packagegroup-base \
 		formfactor \
 		coreutils \
 		mini-x-session \
-		linux-trik-data \
 		trik-uart-ppp \
 		trik-mems \
 		python3-pip \

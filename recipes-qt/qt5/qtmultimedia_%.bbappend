@@ -1,4 +1,3 @@
-DEPENDS:remove = "qtdeclarative"
 DEPENDS += "qtbase"
-PACKAGECONFIG:remove = "gstreamer gstreamer010"
+PACKAGECONFIG:remove = "gstreamer010"
 PACKAGECONFIG:remove = "pulseaudio"

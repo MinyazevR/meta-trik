@@ -13,7 +13,6 @@ IMAGE_INSTALL = "packagegroup-base \
 		kernel-image \
 		kernel-devicetree \
 		udev-extraconf \
-		rc-local\
 		trik-runtime \
 		trik-examples \
 		trik-network \

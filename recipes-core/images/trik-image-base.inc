@@ -8,7 +8,6 @@ IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-core-ssh-openssh \
 		localedef \
 		procps \
-		packagegroup-firmware \
 		packagegroup-utils \
 		udev-extraconf \
 		mspbsl \

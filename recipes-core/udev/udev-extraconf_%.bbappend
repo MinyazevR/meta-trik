@@ -6,6 +6,7 @@ SRC_URI:append = " \
                file://wlan-rename.sh \
                file://video.rules \
                file://nrf-usb.rules \
+               file://80-wifi-supplicant.rules \
                "
 
 do_install:append() {
@@ -13,4 +14,5 @@ do_install:append() {
       install -D -m 0755 ${WORKDIR}/wlan-rename.sh ${D}${sysconfdir}/udev/scripts/wlan-rename.sh
       install -m 0644 ${WORKDIR}/video.rules ${D}${sysconfdir}/udev/rules.d/
       install -m 0644 ${WORKDIR}/nrf-usb.rules ${D}${sysconfdir}/udev/rules.d/
+      install -m 0644 ${WORKDIR}/80-wifi-supplicant.rules ${D}${sysconfdir}/udev/rules.d/
 }

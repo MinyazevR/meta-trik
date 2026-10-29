@@ -1,0 +1,4 @@
+# Trigger wifi mode init as soon as the USB dongle appears with its final name.
+# The template service reads /etc/trik/trikrc and starts the right daemon
+# (wpa_supplicant for client, hostapd for access point).
+SUBSYSTEM=="net", ACTION=="add", KERNEL=="wlan0", TAG+="systemd", RUN+="/usr/bin/systemctl --no-block start trik-wifi-init@$kernel.service"

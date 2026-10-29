@@ -8,16 +8,14 @@ SRC_URI = "git://github.com/trikset/trik-models.git;protocol=https;branch=${BRAN
 PV="0-git${SRCPV}"
 S = "${WORKDIR}/git"
 
-inherit user-partion
-
 do_compile(){
 	  bbnote "Empty do_compile task"
 }
 do_install(){
-	install -d ${D}${TRIK_USER_PARTION_CREATION_DIR}/trik-examples/
-	cp -rvf ${S}/* ${D}${TRIK_USER_PARTION_CREATION_DIR}/trik-examples/
+	install -d ${D}/home/root/trik/trik-examples/
+	cp -rvf ${S}/* ${D}/home/root/trik/trik-examples/
 }
-FILES:${PN} = "${TRIK_USER_PARTION_CREATION_DIR}"
+FILES:${PN} = "/home/root/trik/trik-examples"
 INHIBIT_SYSROOT_STRIP = "1"
 INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"

@@ -1,6 +1,6 @@
 SUMMARY = "ROS2 Humble minimal package group for TRIK board"
 DESCRIPTION = "\
-    Minimal ROS2 Humble stack for ARM926EJS (OMAP L138). \
+    Minimal ROS2 Humble stack for TRIK. \
     Uses Cyclone DDS as the lightest available rmw middleware. \
     GUI tools, simulation and heavy-weight packages are excluded. \
 "

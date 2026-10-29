@@ -1,0 +1,14 @@
+[Unit]
+Description=TRIK UART PPP/login on ttyS1
+After=dev-ttyS1.device
+ConditionPathExists=/dev/ttyS1
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=/etc/trik/init_ttyS1.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

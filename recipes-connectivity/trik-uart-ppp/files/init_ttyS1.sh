@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# TODO: verify the real UART device on a board sample (ttyS1 is carried over from OMAP-L138).
 device="ttyS1"
 baudrate=115200
 

@@ -1,6 +1,9 @@
 [Unit]
 Description=WPA supplicant daemon (interface-specific)
-After=network.target
+After=network.target sys-subsystem-net-devices-%i.device hostapd.service
+BindsTo=sys-subsystem-net-devices-%i.device
+Conflicts=hostapd.service
+PartOf=trik-wifi-client.target
 
 [Service]
 Type=simple

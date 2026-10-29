@@ -1,0 +1,15 @@
+[Unit]
+Description=TRIK GUI
+After=nrf-fw-update.service trik-wifi-mode@wlan0.service dev-dri-card0.device display-manager.service
+Wants=dev-dri-card0.device display-manager.service
+
+[Service]
+Type=simple
+Environment=DISPLAY=:0
+Environment=QT_QPA_PLATFORM=xcb
+ExecStart=/usr/libexec/trik/trikGui.sh
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

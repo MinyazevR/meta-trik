@@ -1,0 +1,11 @@
+[Unit]
+Description=nRF52833 firmware update via mcumgr
+RequiresMountsFor=/usr/libexec/trik/nrf52833
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/trik/nrf52833/update_nrf_fw.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

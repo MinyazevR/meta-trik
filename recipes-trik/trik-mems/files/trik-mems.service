@@ -1,0 +1,13 @@
+[Unit]
+Description=TRIK MEMS and UART/I2C voltage setup
+After=local-fs.target systemd-modules-load.service
+Before=trikGui.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=-/usr/libexec/trik/init_mems.sh
+ExecStart=-/usr/libexec/trik/init_uart_i2c_voltage.sh
+
+[Install]
+WantedBy=multi-user.target

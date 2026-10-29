@@ -1,4 +1,7 @@
 #!/bin/bash
+# TODO: revisit for the new RK3568 sensors (legacy: iio:device0/device1).
+exit 0
+
 set -ueo pipefail
 [ -r /etc/default/trik/mems_options.sh ] && source /etc/default/trik/mems_options.sh || :
 

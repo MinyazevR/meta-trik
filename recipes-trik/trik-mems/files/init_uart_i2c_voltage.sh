@@ -1,4 +1,6 @@
 #!/bin/bash
+# TODO: legacy OMAP GPIO (/sys/class/gpio/gpio30); revisit for RK3568.
+exit 0
 
 [ -r /etc/default/trik/uart_i2c_voltage_options.sh ] && source /etc/default/trik/uart_i2c_voltage_options.sh || :
 

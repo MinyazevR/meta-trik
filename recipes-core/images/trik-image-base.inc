@@ -10,8 +10,9 @@ IMAGE_INSTALL = "packagegroup-base \
 		procps \
 		packagegroup-utils \
 		packagegroup-firmware \
+		kernel-image \
+		kernel-devicetree \
 		udev-extraconf \
-		mspbsl \
 		rc-local\
 		trik-runtime \
 		trik-examples \

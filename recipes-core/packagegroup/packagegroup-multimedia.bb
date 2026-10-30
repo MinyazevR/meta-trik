@@ -19,7 +19,7 @@ RDEPENDS:${PN} = "\
   gstreamer1.0-rockchip \
   rockchip-mpp \
   flac \
-  mjpg-streamer \
+  mediamtx \
   live555 \
  "
 #vlc

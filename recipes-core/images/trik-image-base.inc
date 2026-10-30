@@ -5,6 +5,7 @@ IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-core-boot \
 		${CORE_IMAGE_EXTRA_INSTALL} \
 		packagegroup-wifi \
+		packagegroup-multimedia \
 		packagegroup-core-ssh-openssh \
 		localedef \
 		procps \

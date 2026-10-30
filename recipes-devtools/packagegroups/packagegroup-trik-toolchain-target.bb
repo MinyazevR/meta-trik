@@ -18,6 +18,8 @@ RDEPENDS:${PN} += "\
 	hidapi-dev \
 	libusb1-dev \
 	protobuf-dev  \
+	rockchip-mpp-dev \
+
 	trik-runtime-qt5-dev \
 	gcc-sanitizers \
 "

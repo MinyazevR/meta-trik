@@ -14,7 +14,6 @@ IMAGE_INSTALL = "packagegroup-base \
 		kernel-image \
 		kernel-devicetree \
 		udev-extraconf \
-		trik-runtime \
 		trik-examples \
 		trik-network \
 		fuse \
@@ -28,6 +27,9 @@ IMAGE_INSTALL = "packagegroup-base \
 		python3-pip \
 		packagegroup-ros2-base \
 "
+
+# TEMP: trikRuntime is not built right now.
+# IMAGE_INSTALL += "trik-runtime"
 
 BAD_RECOMMENDATIONS += "rng-tools"
 

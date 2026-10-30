@@ -23,8 +23,10 @@ RDEPENDS:${PN} += "\
 	gstreamer1.0-plugins-base-dev \
 	gstreamer1.0-plugins-bad-dev \
 	gstreamer1.0-rtsp-server-dev \
-	trik-runtime-qt5-dev \
 	gcc-sanitizers \
 "
+# TEMP: trikRuntime is not built right now.
+# RDEPENDS:${PN} += "trik-runtime-qt5-dev"
+
 # trik-ros-dev
 

@@ -7,6 +7,9 @@ Wants=dev-dri-card0.device display-manager.service
 Type=simple
 Environment=DISPLAY=:0
 Environment=QT_QPA_PLATFORM=xcb
+Environment=QT_XCB_GL_INTEGRATION=xcb_egl
+Environment=QT_OPENGL=es2
+Environment=QT_QUICK_BACKEND=opengl
 ExecStart=/usr/libexec/trik/trikGui.sh
 Restart=on-failure
 RestartSec=3

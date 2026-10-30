@@ -1,6 +1,8 @@
 PACKAGECONFIG_FONTS = "fontconfig freetype"
 #PACKAGECONFIG[dyngl] = "-opengl dynamic,,,"
-#PACKAGECONFIG_GL = "${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'gles2', 'no-opengl', d)}"
+PACKAGECONFIG_GL = "${@bb.utils.contains('DISTRO_FEATURES', 'x11 opengl', 'gles2', \
+                        bb.utils.contains('DISTRO_FEATURES', 'opengl', 'kms gbm gles2 eglfs', \
+                                          'no-opengl', d), d)}"
 #PACKAGECONFIG_FB = "directfb linuxfb"
 PACKAGECONFIG_DISTRO = "icu optimize-size"
 #PACKAGECONFIG_DISTRO += "ltcg"

@@ -14,7 +14,6 @@ IMAGE_INSTALL = "packagegroup-base \
 		kernel-image \
 		kernel-devicetree \
 		udev-extraconf \
-		trik-examples \
 		trik-network \
 		fuse \
 		eglibc-utils \
@@ -30,6 +29,9 @@ IMAGE_INSTALL = "packagegroup-base \
 
 # TEMP: trikRuntime is not built right now.
 # IMAGE_INSTALL += "trik-runtime"
+
+# TEMP: trik-examples is not built right now.
+# IMAGE_INSTALL += "trik-examples"
 
 BAD_RECOMMENDATIONS += "rng-tools"
 

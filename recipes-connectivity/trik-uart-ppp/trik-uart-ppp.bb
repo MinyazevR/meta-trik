@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/${LICENSE};md5=89aea4e17d99a7ca
 PV = "1.0"
 PR = "r1"
 
-inherit systemd
+inherit systemd features_check
 
 REQUIRED_DISTRO_FEATURES = "systemd"
 

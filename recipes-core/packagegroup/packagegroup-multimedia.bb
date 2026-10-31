@@ -20,7 +20,6 @@ RDEPENDS:${PN} = "\
   rockchip-mpp \
   flac \
   mediamtx \
-  live555 \
  "
 #vlc
 #  ffmpeg

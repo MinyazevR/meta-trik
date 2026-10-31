@@ -70,6 +70,14 @@ start_target() {
 	systemctl start "trik-wifi-$1.target"
 }
 
+disable_power_save() {
+	if ! command -v iw >/dev/null 2>&1; then
+		return 0
+	fi
+	iw dev "$IFACE" set power_save off >/dev/null 2>&1 || \
+		echo "set_wifi_mode: power save off not supported on $IFACE" >&2
+}
+
 SAVED_MODE="$(trik_get trik_wifi_mode)"
 SWITCHING=0
 
@@ -104,5 +112,8 @@ if [ "$mode" = "ap" ]; then
 fi
 
 start_target "$mode"
+if [ "$mode" = "client" ]; then
+	disable_power_save
+fi
 trik_set trik_wifi_mode "$mode"
 SWITCHING=0

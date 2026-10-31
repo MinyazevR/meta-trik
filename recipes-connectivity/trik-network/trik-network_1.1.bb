@@ -6,7 +6,7 @@ SUMMARY = "Shell scripts for managing WiFi on TRIK controller"
 
 inherit systemd
 
-RDEPENDS:${PN} += "hostapd wpa-supplicant coreutils"
+RDEPENDS:${PN} += "hostapd wpa-supplicant coreutils iw"
 
 SRC_URI = " \
     file://set_wifi_mode.sh \

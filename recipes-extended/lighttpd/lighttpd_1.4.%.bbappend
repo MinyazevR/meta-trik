@@ -6,12 +6,8 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/${BPN}:"
 RDEPENDS:${PN} += "bash"
 
 RDEPENDS:${PN} += " \
-        lighttpd-module-alias \
         lighttpd-module-cgi \
-        lighttpd-module-rewrite \
-        lighttpd-module-redirect \
         lighttpd-module-proxy \
-         lighttpd-module-expire \
 "
 
 SRC_URI:append = "file://wpa-configurator.sh \

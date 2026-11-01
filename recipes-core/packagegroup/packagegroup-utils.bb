@@ -15,6 +15,8 @@ RDEPENDS:${PN} = "\
   iptables \
   mtd-utils \
   evtest \
+  x11vnc \
+  xdotool \
   devmem2 \
   i2c-tools \
   usbutils \

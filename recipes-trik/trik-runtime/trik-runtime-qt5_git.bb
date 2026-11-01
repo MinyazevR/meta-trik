@@ -1,6 +1,6 @@
 SRCREV="${AUTOREV}"
 TRIK_RUNTIME_UPDATE = "${SRCREV}"
-GIT_REVISION = "branch=master"
+GIT_REVISION = "branch=trik2"
 PV = "git${SRCREV}"
 #PR="r${TRIK_RUNTIME_UPDATE}"
 require trik-runtime-qt5.inc
@@ -19,7 +19,7 @@ EXTRA_QMAKEVARS_PRE += "-r CONFIG+=release CONFIG+=ltcg CONFIG+=use_gold_linker 
 			CONFIG+=noPch CONFIG+=sanitize_undefined CONFIG+=sanitizer \
 			PYTHONQTALL_CONFIG+=PythonQtCore \
 			PYTHONQTALL_CONFIG+=PythonQtGui"
-TRIK_PYTHON_VERSION = "3.10"
+TRIK_PYTHON_VERSION = "3.12"
 EXTRA_QMAKEVARS_PRE += "PYTHON_VERSION=${TRIK_PYTHON_VERSION} PKGCONFIG+=python-${TRIK_PYTHON_VERSION}-embed"
 # For script gathering logs information
 RDEPENDS:${PN} += "bash xz"

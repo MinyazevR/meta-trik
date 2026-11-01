@@ -8,6 +8,7 @@ RDEPENDS:${PN} = "locale-default espeak alsa-utils v4l-utils liberation-fonts"
 inherit qmake5 pkgconfig systemd
 DEPENDS += "qtmultimedia qtscript qttools-native qtserialport"
 DEPENDS += "qtquickcontrols2 qtquickcontrols qtdeclarative qtsvg"
+DEPENDS += "nrf-usb-headers"
 
 # ros2 depends
 DEPENDS += "rclcpp sensor-msgs"
@@ -35,9 +36,12 @@ SRC_URI = "gitsm://github.com/trikset/trikRuntime.git;protocol=https;${GIT_REVIS
 S = "${WORKDIR}/git"
 
 QMAKE_PROFILES = "${S}/trikRuntime.pro"
-EXTRA_QMAKEVARS_PRE += "PYTHONQT_GENERATED_PATH=${S}/PythonQt/PythonQt/generated_cpp_`${OE_QMAKE_QMAKE} -query QT_VERSION`_triksdk"
+EXTRA_QMAKEVARS_PRE += "PYTHONQT_GENERATED_PATH=${S}/PythonQt/PythonQt/generated_cpp_`${OE_QMAKE_QMAKE} -query QT_VERSION`_trik2sdk"
 
 do_compile(){
+        # Workaround for building Qt with the newer compiler: remove the
+        # invalid -isystem .../usr/include flags from the generated Makefiles.
+        find "${B}" -name "Makefile*" -exec sed -i 's|-isystem [^ ]*/usr/include||g' {} +
         oe_runmake
 }
 

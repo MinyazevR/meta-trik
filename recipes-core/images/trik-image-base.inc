@@ -10,6 +10,8 @@ IMAGE_INSTALL = "packagegroup-base \
 		procps \
 		packagegroup-firmware \
 		packagegroup-utils \
+		kernel-image \
+		kernel-devicetree \
 		udev-extraconf \
 		rc-local\
 		trik-runtime \
@@ -22,7 +24,6 @@ IMAGE_INSTALL = "packagegroup-base \
 		formfactor \
 		coreutils \
 		mini-x-session \
-		linux-trik-data \
 		trik-uart-ppp \
 		trik-mems \
 		python3-pip \

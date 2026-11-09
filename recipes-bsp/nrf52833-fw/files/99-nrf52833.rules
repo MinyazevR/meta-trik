@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="tty", ATTRS{idVendor}=="2fe9", ATTRS{idProduct}=="0100", ATTRS{product}=="MCUBOOT", SYMLINK+="nrf52833-bl"
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="2fe9", ATTRS{idProduct}=="0100", ATTRS{product}=="periphery-module", MODE="0666", TAG+="systemd", ENV{SYSTEMD_WANTS}+="nrf-fw-update.service"

@@ -1,0 +1,2 @@
+# nRF52833 USB driver - load kernel module on device connect
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="2fe9", ATTRS{idProduct}=="0100", RUN+="/sbin/modprobe nrf-usb"

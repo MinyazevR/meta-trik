@@ -1,0 +1,7 @@
+bootloader --ptable gpt
+
+part boot --source rawcopy --sourceparams="file=barebox/barebox.bin" --offset 32K --fixed-size 2560K --part-type=0fc63daf-8483-4772-8e79-3d69d8477de4 --part-name boot
+
+part env --source empty --size 1M --part-type=6c3737f2-07f8-45d1-ad45-15d260aab24d --part-name  env
+
+part root --source rootfs --fstype=ext4 --fixed-size 1536M --part-type=b921b045-1df0-41c3-af44-4c6f280d3fae --part-name  root

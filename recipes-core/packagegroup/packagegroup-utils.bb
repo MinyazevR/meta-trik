@@ -28,7 +28,6 @@ RDEPENDS:${PN} = "\
   tzdata \
   rsync \
   fbgrab \
-  u-boot-trik-fw-utils \
   curl \
   psplash \
   picocom \

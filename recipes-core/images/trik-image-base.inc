@@ -11,7 +11,6 @@ IMAGE_INSTALL = "packagegroup-base \
 		packagegroup-firmware \
 		packagegroup-utils \
 		udev-extraconf \
-		mspbsl \
 		rc-local\
 		trik-runtime \
 		trik-examples \

@@ -1,0 +1,12 @@
+[Unit]
+Description=TRIK MEMS setup
+After=local-fs.target systemd-modules-load.service
+Before=trikGui.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=-/usr/libexec/trik/init_mems.sh
+
+[Install]
+WantedBy=multi-user.target

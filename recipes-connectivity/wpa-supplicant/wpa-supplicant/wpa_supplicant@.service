@@ -1,0 +1,10 @@
+[Unit]
+Description=WPA supplicant daemon (interface-specific)
+After=network.target sys-subsystem-net-devices-%i.device hostapd.service
+BindsTo=sys-subsystem-net-devices-%i.device
+Conflicts=hostapd.service
+PartOf=trik-wifi-client.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/wpa_supplicant -s -i %I -c /etc/wpa_supplicant.conf -D nl80211

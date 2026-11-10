@@ -16,7 +16,6 @@ RDEPENDS:${PN} = "\
   gstreamer1.0-rtsp-server \
   flac \
   mjpg-streamer \
-  live555 \
  "
 #vlc
 #  ffmpeg

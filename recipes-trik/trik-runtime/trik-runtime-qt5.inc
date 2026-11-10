@@ -5,7 +5,7 @@ RDEPENDS:${PN} = "locale-default espeak alsa-utils v4l-utils liberation-fonts mj
 
 #RRECOMMENDS:${PN} = "vlc"
 
-inherit qmake5 pkgconfig
+inherit qmake5 pkgconfig systemd
 DEPENDS += "qtmultimedia qtscript qttools-native qtserialport"
 DEPENDS += "qtquickcontrols2 qtquickcontrols qtdeclarative qtsvg"
 
@@ -15,18 +15,22 @@ DEPENDS += "rclcpp sensor-msgs"
 #RREPLACES:${PN} += "trik-runtime"
 RCONFLICTS:${PN} += "trik-runtime-qt4"
 RPROVIDES:${PN} += "trik-runtime"
+
+SYSTEMD_SERVICE:${PN} = "gamepad.service trikGui.service trik-log-gc.service"
 TAG ?= "${PV}-${TRIK_RUNTIME_UPDATE}"
 #GIT_REVISION ?= "tag=${TAG};nobranch=1"
 SRCREV = "${AUTOREV}"
 SRC_URI = "gitsm://github.com/trikset/trikRuntime.git;protocol=https;${GIT_REVISION} \
           file://trikGui.sh \
+          file://trikGui.service \
           file://qws_display.sh \
           file://trik_runtime_path.sh \
           file://python_path.sh \
           file://log_manager.sh \
           file://compress_logs.sh \
+          file://trik-log-gc.service \
           file://say \
-          file://gamepad-service"
+          file://gamepad.service"
 
 S = "${WORKDIR}/git"
 
@@ -37,7 +41,7 @@ do_compile(){
         oe_runmake
 }
 
-FILES:${PN} += "${datadir}"
+FILES:${PN} += "${datadir} ${libexecdir}/trik ${systemd_system_unitdir}"
 
 
 FILES:${PN} += "/home/root/trik/"

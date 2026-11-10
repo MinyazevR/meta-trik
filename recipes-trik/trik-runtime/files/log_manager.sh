@@ -24,7 +24,6 @@ remaining_size_limit_k=100
 tree_elements_list=(
 	"/home/root/trik/scripts/"
 	"/home/root/trik/trik.log"
-	"/var/trik/syslog"
 	"/var/log/"
 	"/home/root/trik/model-config.xml"
 	"/home/root/trik/system-config.xml"
@@ -33,6 +32,7 @@ tree_elements_list=(
 utils_list=(
 	"cat /etc/version"
 	"dmesg"
+	"journalctl -b --no-pager"
 	"i2cdetect -y 1"
 	"i2cdetect -y 2"
 	"i2cget -y 2 0x48 0xee w"

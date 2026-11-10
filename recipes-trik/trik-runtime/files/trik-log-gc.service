@@ -1,0 +1,10 @@
+[Unit]
+Description=TRIK log garbage collection
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/trik/compress_logs.sh
+
+[Install]
+WantedBy=multi-user.target

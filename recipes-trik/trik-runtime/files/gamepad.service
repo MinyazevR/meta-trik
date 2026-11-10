@@ -1,0 +1,13 @@
+[Unit]
+Description=TRIK gamepad service
+After=network.target
+
+[Service]
+Type=simple
+ExecStartPre=/bin/bash -c 'test -p /run/gamepad-service.out.fifo || { rm -f /run/gamepad-service.out.fifo ; mkfifo /run/gamepad-service.out.fifo ; }'
+ExecStart=/bin/bash -c '/bin/nc -vlkp 4444 | tee /run/gamepad-service.out.fifo'
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

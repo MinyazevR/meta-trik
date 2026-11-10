@@ -6,6 +6,7 @@ Subject: [PATCH] psplash: Add Arago custom color
 * Port custom colors used in psplash-ti from oe-classic.
 
 Signed-off-by: Franklin S. Cooper Jr <fcooper@ti.com>
+Upstream-Status: Inappropriate [configuration-specific branding]
 ---
  psplash-colors.h |    8 ++++----
  1 files changed, 4 insertions(+), 4 deletions(-)

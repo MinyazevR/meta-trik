@@ -1,0 +1,9 @@
+[Unit]
+Description=TRIK WiFi mode (%I)
+After=systemd-networkd.service
+Before=trikGui.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/sh -c 'if [ -f /etc/trik/trikrc ]; then . /etc/trik/trikrc; fi; exec /usr/libexec/trik/set_wifi_mode.sh "%I" "${trik_wifi_mode:-client}"'

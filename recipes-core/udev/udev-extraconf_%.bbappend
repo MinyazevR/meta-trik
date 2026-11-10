@@ -8,6 +8,8 @@ SRC_URI:append = " \
                file://nrf-usb.rules \
                "
 
+RDEPENDS:${PN} += "iproute2"
+
 do_install:append() {
       install -m 0644 ${WORKDIR}/wlan.rules ${D}${sysconfdir}/udev/rules.d/
       install -D -m 0755 ${WORKDIR}/wlan-rename.sh ${D}${sysconfdir}/udev/scripts/wlan-rename.sh

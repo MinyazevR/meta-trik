@@ -16,7 +16,6 @@ IMAGE_INSTALL = "packagegroup-base \
 		rc-local\
 		trik-runtime \
 		trik-examples \
-		softap-udhcpd-config \
 		trik-network \
 		fuse \
 		eglibc-utils \

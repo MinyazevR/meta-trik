@@ -1,0 +1,5 @@
+[Unit]
+Description=TRIK WiFi client mode
+Conflicts=trik-wifi-ap.target
+Requires=systemd-networkd.service trik-wifi-config@station.service wpa_supplicant@wlan0.service
+After=systemd-networkd.service trik-wifi-config@station.service wpa_supplicant@wlan0.service sys-subsystem-net-devices-wlan0.device

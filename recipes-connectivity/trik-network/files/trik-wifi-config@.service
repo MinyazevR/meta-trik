@@ -1,0 +1,8 @@
+[Unit]
+Description=TRIK WiFi networkd config (%i)
+After=systemd-networkd.service hostapd.service
+Requires=systemd-networkd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/trik/set_wifi_config.sh %i

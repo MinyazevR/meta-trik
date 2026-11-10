@@ -35,7 +35,7 @@ if [ "$REQUEST_METHOD" = "POST" ]; then
             fi
         fi
     else
-        networkStr="network={\n\tssid=\"$essid\"\n\tkey_mgmt=NONE\n\tpriority=$priority\n}"
+        networkStr="network={\n\tssid=\"$essid\"\n\tkey_mgmt=NONE\n\tpriority=$priority\n\tdisabled=1\n}"
         echo -e "$networkStr" >> /etc/wpa_supplicant.conf
         if [ "$?" = "0" ]; then
             sync
